@@ -14,7 +14,7 @@ layers:
   - O
   - {t: ;, s: ':'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Ctl+X, h: Ctl+C}
+  - {t: Ctl+C, h: Ctl+X}
   - A
   - S
   - D
