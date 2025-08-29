@@ -132,14 +132,5 @@
                         &trans  &trans  &trans                                    &trans        &trans        &trans
             >;
         };
-
-        Mobanogi {
-            bindings = <
-&trans  &kp SLASH  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
-        };
     };
 };
