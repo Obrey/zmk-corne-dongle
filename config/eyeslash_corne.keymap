@@ -131,19 +131,19 @@
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp LC(C)   &kp LC(V)    &kp UP         &kp LC(X)  &kp LC(Z)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp TAB     &kp LEFT     &kp DOWN       &kp RIGHT  &kp HOME       &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp INSERT  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &kp RIGHT_ALT  &trans
-                        &trans  &trans  &trans                                    &trans      &trans       &trans
+&trans  &trans  &trans     &trans     &trans     &trans                    &trans          &trans      &trans       &kp UP         &trans     &trans         &trans
+&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp TAB     &kp LEFT     &kp DOWN       &kp RIGHT  &kp HOME       &trans
+&trans  &kp Z   &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans            &trans          &kp INSERT  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &kp RIGHT_ALT  &trans
+                           &trans     &trans     &trans                                    &trans      &trans       &trans
             >;
         };
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp LC(C)              &kp LC(V)       &mmv MOVE_UP    &kp LC(X)        &kp LC(Z)        &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LC(LEFT_BRACKET)   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp LC(RIGHT_BRACKET)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                        &trans  &trans  &trans                                    &mkp RCLK              &mkp LCLK       &mkp MCLK
+&trans  &trans     &trans     &trans     &trans     &trans                    &trans          &kp LC(EQUAL)          &kp LC(MINUS)   &mmv MOVE_UP    &trans           &trans           &trans
+&trans  &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp LC(LEFT_BRACKET)   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(V)  &trans  &trans            &trans          &kp LC(RIGHT_BRACKET)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
+                              &trans     &trans     &trans                                    &mkp RCLK              &mkp LCLK       &mkp MCLK
             >;
         };
 
