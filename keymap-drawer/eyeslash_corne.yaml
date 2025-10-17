@@ -253,11 +253,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Ctl+[', s: 'Ctl+{'}
+  - {t: 'Ctl+]', s: 'Ctl+}'}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: Ctl+=, s: Ctl++}
   - {t: Ctl+-, s: Ctl+_}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
