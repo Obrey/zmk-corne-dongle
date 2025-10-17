@@ -140,10 +140,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                    &trans          &kp LC(EQUAL)          &kp LC(MINUS)   &mmv MOVE_UP    &trans           &trans           &trans
-&trans  &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp LC(LEFT_BRACKET)   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(V)  &trans  &trans            &trans          &kp LC(RIGHT_BRACKET)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                              &trans     &trans     &trans                                    &mkp RCLK              &mkp LCLK       &mkp MCLK
+&trans  &trans     &trans     &trans     &trans     &trans                    &trans          &kp LC(LEFT_BRACKET)   &kp LC(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LC(EQUAL)    &kp LC(MINUS)    &trans
+&trans  &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp LC(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(V)  &trans  &trans            &trans          &kp LC(RIGHT_BRACKET)  &msc SCRL_UP           &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
+                              &trans     &trans     &trans                                    &mkp RCLK              &mkp LCLK              &mkp MCLK
             >;
         };
 
