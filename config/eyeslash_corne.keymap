@@ -103,6 +103,7 @@
         };
 
         Num {
+            display-name = "Num";
             bindings = <
 &trans  &kp LEFT_BRACKET  &kp N7  &kp N8  &kp N9      &kp RIGHT_BRACKET                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp APOS          &kp N4  &kp N5  &kp N6      &kp EQUAL                    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -112,6 +113,7 @@
         };
 
         Sym {
+            display-name = "Sym";
             bindings = <
 &trans  &kp LEFT_BRACE     &kp AMPERSAND    &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT            &kp CARET             &kp PLUS                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -121,6 +123,7 @@
         };
 
         Fun {
+            display-name = "Fun";
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8      &kp F9     &kp PRINTSCREEN                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -130,6 +133,7 @@
         };
 
         Nav {
+            display-name = "Nav";
             bindings = <
 &trans  &trans  &trans     &trans     &trans     &trans                    &trans          &trans      &trans       &kp UP         &trans     &trans         &trans
 &trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp TAB     &kp LEFT     &kp DOWN       &kp RIGHT  &kp HOME       &trans
@@ -139,6 +143,7 @@
         };
 
         Mouse {
+            display-name = "Mouse";
             bindings = <
 &trans  &trans     &trans     &trans     &trans     &trans                    &trans          &kp LC(LEFT_BRACKET)   &kp LC(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LC(EQUAL)    &kp LC(MINUS)    &trans
 &trans  &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp LC(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
@@ -148,6 +153,7 @@
         };
 
         Media {
+            display-name = "Media";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans        &out OUT_USB  &out OUT_BLE       &out OUT_TOG  &bt BT_CLR    &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans        &trans        &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp K_MUTE    &trans
