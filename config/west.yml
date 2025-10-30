@@ -26,7 +26,7 @@ manifest:
     #   remote: englmaxi
     #   revision: main
     # 이걸 추가
-    - name: zmk-dongle-display-view
+    - name: zmk-dongle-display
       remote: mctechnology17
       revision: main
   self:
