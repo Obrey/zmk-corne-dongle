@@ -8,8 +8,6 @@ manifest:
       url-base: https://github.com/tokyo2006
     - name: englmaxi
       url-base: https://github.com/englmaxi
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
   projects:
     - name: hammerbeam-slideshow
       remote: gpeye
@@ -18,16 +16,11 @@ manifest:
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
-    - name: prospector-zmk-module
-      remote: tokyo2006
+    - name: prospector-zmk-module                 # <--- and these
+      remote: tokyo2006                          # <---
       revision: change_spi2
-    # 아래 줄 주석처리하고
-    # - name: zmk-dongle-display
-    #   remote: englmaxi
-    #   revision: main
-    # 이걸 추가
     - name: zmk-dongle-display
-      remote: mctechnology17
+      remote: englmaxi
       revision: main
   self:
     path: config
