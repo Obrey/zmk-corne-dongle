@@ -145,10 +145,10 @@
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                    &trans          &kp LG(LEFT_BRACKET)   &kp LG(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
-&trans  &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &kp LG(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(V)  &trans  &trans            &trans          &kp LG(RIGHT_BRACKET)  &msc SCRL_UP           &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                              &trans     &trans     &trans                                    &mkp RCLK              &mkp LCLK              &mkp MCLK
+&trans  &trans     &trans     &trans     &trans     &trans                            &mmv MOVE_UP                     &kp LG(LEFT_BRACKET)   &kp LG(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
+&trans  &trans     &trans     &trans     &trans     &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans                    &mmv MOVE_DOWN                   &kp LG(RIGHT_BRACKET)  &msc SCRL_UP           &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
+                              &trans     &trans     &trans                                                             &mkp RCLK              &mkp LCLK              &mkp MCLK
             >;
         };
 
