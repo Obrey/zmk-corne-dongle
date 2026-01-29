@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -11,13 +11,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
-
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <100>;
+    delay-ms = <0>;
 };
 
 &mmv {
@@ -39,7 +38,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <130>;
@@ -51,7 +49,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HM250";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <130>;
@@ -59,16 +56,15 @@
             flavor = "tap-preferred";
         };
 
-/* --- [1] 안전한 터보/스나이퍼 엔진 --- */
-        
+        /* --- [1] 안전한 터보/스나이퍼 엔진 --- */
         mmv_turbo: mmv_turbo {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
-            x-input-code = <0x00>;  /* 안전한 숫자 코드 */
+            x-input-code = <0x00>;
             y-input-code = <0x01>;
             time-to-max-speed-ms = <20>;
             acceleration-exponent = <1>;
-            input-processors = <&zip_xy_scaler 3 1>; /* 3배 속도 */
+            input-processors = <&zip_xy_scaler 3 1>;
         };
 
         mmv_sniper: mmv_sniper {
@@ -78,7 +74,7 @@
             y-input-code = <0x01>;
             time-to-max-speed-ms = <1000>;
             acceleration-exponent = <2>;
-            input-processors = <&zip_xy_scaler 1 3>; /* 1/3 속도 */
+            input-processors = <&zip_xy_scaler 1 3>;
         };
     };
 
@@ -92,13 +88,11 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
         tap-ms = <100>;
     };
 
     combos {
         compatible = "zmk,combos";
-
         mouse {
             bindings = <&tog 5>;
             key-positions = <37 40>;
@@ -122,21 +116,20 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&mt LG(A) LG(Z)  &kp SLASH       &kp W          &kp E              &kp R           &kp T                               &kp W             &kp Y        &kp U            &kp I              &kp O          &kp SEMICOLON   &trans
-&mt LG(X) LG(C)  &hm250 LCTRL A  &hm200 LALT S  &hm200 LEFT_GUI D  &hm200 LSHFT F  &kp G                        &kp A  &mkp LCLK  &kp D  &kp H        &hm200 LSHFT J   &hm200 LEFT_GUI K  &hm200 LALT L  &hm250 LCTRL P  &trans
-&kp LG(V)        &kp Z           &kp X          &kp C              &kp V           &kp Q           &kp SPACE           &kp S             &kp N        &kp M            &kp B              &kp COMMA      &kp PERIOD      &trans
-                                                &lt 6 ESC          &lt 4 SPACE     &lt 5 CAPSLOCK                                        &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
+&mt LG(A) LG(Z)  &kp SLASH       &kp W          &kp E              &kp R           &kp T                                    &kp W             &kp Y        &kp U            &kp I              &kp O          &kp SEMICOLON   &trans
+&mt LG(X) LG(C)  &hm250 LCTRL A  &hm200 LALT S  &hm200 LEFT_GUI D  &hm200 LSHFT F  &kp G              &kp A      &mkp LCLK  &kp D             &kp H        &hm200 LSHFT J   &hm200 LEFT_GUI K  &hm200 LALT L  &hm250 LCTRL P  &trans
+&kp LG(V)        &kp Z           &kp X          &kp C              &kp V           &kp Q  &kp SPACE           &kp S             &kp N             &kp M        &kp B            &kp COMMA          &kp PERIOD     &trans
+                                                &lt 6 ESC          &lt 4 SPACE     &lt 5 CAPSLOCK                                             &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Num {
             display-name = "Num";
             bindings = <
-&trans  &kp LEFT_BRACKET  &kp N7  &kp N8  &kp N9      &kp RIGHT_BRACKET                    &trans          &trans  &trans  &trans  &trans            &trans             &trans
-&trans  &kp APOS          &kp N4  &kp N5  &kp N6      &kp EQUAL                    &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans
-&trans  &kp GRAVE         &kp N1  &kp N2  &kp N3      &kp BSLH           &trans            &trans          &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp LEFT_BRACKET  &kp N7  &kp N8  &kp N9      &kp RIGHT_BRACKET                    &trans          &trans  &trans  &trans            &trans             &trans
+&trans  &kp APOS          &kp N4  &kp N5  &kp N6      &kp EQUAL            &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans
+&trans  &kp GRAVE         &kp N1  &kp N2  &kp N3      &kp BSLH   &trans            &trans          &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
                                   &kp N0  &kp PERIOD  &kp UNDERSCORE                                       &trans  &trans  &trans
             >;
         };
@@ -144,17 +137,17 @@
         Sym {
             display-name = "Sym";
             bindings = <
-&trans  &kp LEFT_BRACE     &kp AMPERSAND    &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                    &trans          &trans  &trans  &trans  &trans          &trans           &trans
-&trans  &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT            &kp CARET             &kp PLUS                   &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans
-&trans  &kp TILDE          &kp EXCLAMATION  &kp AT_SIGN            &kp HASH              &kp PIPE         &trans            &trans          &trans  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
-                                            &kp RIGHT_PARENTHESIS  &trans                &kp MINUS                                          &trans  &trans  &trans
+&trans  &kp LEFT_BRACE     &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                    &trans          &trans  &trans  &trans          &trans           &trans
+&trans  &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET             &kp PLUS           &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans
+&trans  &kp TILDE          &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp PIPE  &trans           &trans          &trans  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+                                            &kp RIGHT_PARENTHESIS  &trans       &kp MINUS                                  &trans  &trans  &trans
             >;
         };
 
         Fun {
             display-name = "Fun";
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8      &kp F9     &kp PRINTSCREEN                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F12  &kp F7  &kp F8      &kp F9     &kp PRINTSCREEN                    &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F10  &kp F1  &kp F2      &kp F3     &kp C_PAUSE      &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                          &kp C_MENU  &kp SPACE  &kp TAB                                            &trans  &trans  &trans
@@ -171,24 +164,47 @@
             >;
         };
 
+        /* --- Mouse 레이어 (왼손에 스위치 추가됨!) --- */
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                            &mmv MOVE_UP                     &kp LG(LEFT_BRACKET)   &kp LG(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
-&trans  &trans     &trans     &trans     &trans     &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &trans     &trans     &trans     &trans     &trans                                    &mmv MOVE_UP                     &kp LG(LEFT_BRACKET)   &kp LG(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
+&trans  &trans     &mo 8      &trans     &mo 7      &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans                    &mmv MOVE_DOWN                   &kp LG(RIGHT_BRACKET)  &msc SCRL_UP           &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                              &trans     &trans     &trans                                                             &mkp RCLK              &mkp LCLK              &mkp MCLK
+                                         &trans     &trans     &trans                                                            &mkp RCLK              &mkp LCLK              &mkp MCLK
             >;
         };
 
         Media {
             display-name = "Media";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans        &out OUT_USB  &out OUT_BLE       &out OUT_TOG  &bt BT_CLR    &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans        &trans        &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp K_MUTE    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &trans
-                        &trans  &trans  &trans                                    &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans        &trans        &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR    &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans        &trans        &kp C_VOLUME_DOWN &kp C_VOL_UP  &kp K_MUTE    &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+                                &trans  &trans  &trans                                          &trans        &trans        &trans
             >;
         };
+
+        /* --- [2] 추가된 터보 & 스나이퍼 레이어 (Eyeslash Corne 배열 맞춤) --- */
+        Turbo {
+            display-name = "Turbo";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                          &mmv_turbo MOVE_UP                     &trans     &trans     &mmv_turbo MOVE_UP    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv_turbo MOVE_LEFT  &trans          &mmv_turbo MOVE_RIGHT  &trans     &mmv_turbo MOVE_LEFT   &mmv_turbo MOVE_DOWN  &mmv_turbo MOVE_RIGHT  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv_turbo MOVE_DOWN                   &trans     &trans     &trans     &trans     &trans     &trans
+                                        &trans  &trans  &trans                                                             &trans     &trans     &trans
+            >;
+        };
+
+        Sniper {
+            display-name = "Sniper";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                          &mmv_sniper MOVE_UP                     &trans     &trans     &mmv_sniper MOVE_UP    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv_sniper MOVE_LEFT  &trans          &mmv_sniper MOVE_RIGHT  &trans     &mmv_sniper MOVE_LEFT   &mmv_sniper MOVE_DOWN  &mmv_sniper MOVE_RIGHT  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv_sniper MOVE_DOWN                   &trans     &trans     &trans     &trans     &trans     &trans
+                                        &trans  &trans  &trans                                                             &trans     &trans     &trans
+            >;
+        };
+
     };
 };
