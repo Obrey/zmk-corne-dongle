@@ -178,7 +178,7 @@
             display-name = "Mouse";
             bindings = <
 &trans  &trans     &trans     &trans     &trans     &trans                            &mmv MOVE_UP                     &kp LG(LEFT_BRACKET)   &kp LG(RIGHT_BRACKET)  &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
-&trans  &trans     &trans     &trans     &trans     &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &trans     &mo 8      &trans     &mo 7      &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LEFT_BRACKET)   &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans                    &mmv MOVE_DOWN                   &kp LG(RIGHT_BRACKET)  &msc SCRL_UP           &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
                               &trans     &trans     &trans                                                             &mkp RCLK              &mkp LCLK              &mkp MCLK
             >;
@@ -194,26 +194,26 @@
             >;
         };
 
-/* 4. 빈 레이어 (필수: 총 48키) */
+        /* 4. 빈 레이어 (필수: 총 48키) */
         /* &trans로 채워두면 아래쪽 Mouse 레이어의 키가 그대로 작동합니다 */
-        
+
         MouseFast {
             display-name = "Fast";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans      &trans  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans                                      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
 
         MouseSlow {
             display-name = "Slow";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans      &trans  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans                                      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
     };
