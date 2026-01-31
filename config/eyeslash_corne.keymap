@@ -2,7 +2,6 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
 /* 1. 레이어 번호 정의 */
-
 #define MOUSE_FAST 7
 #define MOUSE_SLOW 8
 
@@ -16,21 +15,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /* 2. 마우스 속도 조절 리스너 설정 */
-
 &mmv_input_listener {
-    /* 기본 속도 (기존 설정: 2배) */
-
     input-processors = <&zip_xy_scaler 2 1>;
-
-    /* F키(Fast)를 누르면 작동: 4배속 */
-
     mouse_fast {
         layers = <MOUSE_FAST>;
         input-processors = <&zip_xy_scaler 4 1>;
     };
-
-    /* S키(Slow)를 누르면 작동: 1배속 (정밀) */
-
     mouse_slow {
         layers = <MOUSE_SLOW>;
         input-processors = <&zip_xy_scaler 1 1>;
@@ -64,7 +54,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <130>;
@@ -76,7 +65,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HM250";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <130>;
@@ -95,18 +83,15 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
         tap-ms = <100>;
     };
 
     combos {
         compatible = "zmk,combos";
-
         mouse {
             bindings = <&tog 5>;
             key-positions = <37 40>;
         };
-
         game {
             bindings = <&tog 9>;
             key-positions = <18 40>;
@@ -114,32 +99,31 @@
     };
 
     macros {
-        // 스페이스를 10번 연타하는 매크로
+        // 스페이스 연타 매크로 (합계 100ms 간격)
         spc_spam: spc_spam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>; // 누르는 간격
-            tap-ms = <50>;  // 떼는 간격
+            wait-ms = <50>;
+            tap-ms = <50>;
             bindings
-                = <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>
+                = <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>
                 , <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>;
         };
-    };
 
+        // 마우스 좌우 스윕 매크로
         mouse_sweep: mouse_sweep {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <5>; // 마우스 이동은 간격이 짧아야 부드럽습니다
+            wait-ms = <5>;
             tap-ms = <5>;
             bindings
-                // 왼쪽으로 크게 이동 (10번 반복)
                 = <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>
                 , <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>
-                // 오른쪽으로 크게 이동 (10번 반복)
                 , <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>
                 , <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -151,7 +135,6 @@
 &kp LG(V)        &kp Z           &kp X          &kp C              &kp V           &kp Q           &kp SPACE           &kp S             &kp N        &kp M            &kp B              &kp COMMA      &kp PERIOD      &trans
                                                 &lt 6 ESC          &lt 4 SPACE     &lt 5 CAPSLOCK                                        &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
@@ -215,9 +198,6 @@
             >;
         };
 
-        /* 4. 빈 레이어 (필수: 총 48키) */
-        /* &trans로 채워두면 아래쪽 Mouse 레이어의 키가 그대로 작동합니다 */
-
         MouseFast {
             display-name = "Fast";
             bindings = <
@@ -242,9 +222,9 @@
             display-name = "Game";
             bindings = <
 &kp TAB       &kp Q   &trans  &trans   &trans     &trans                         &kp UP                &trans     &trans         &trans      &trans  &trans  &trans
-&kp LCTRL     &kp A   &kp S   &kp D    &kp F      &trans               &kp LEFT  &mkp RCLK  &kp RIGHT  &trans     &kp J          &kp K       &kp L   &kp P   &trans
+&kp LCTRL     &kp A   &kp S   &kp D    &kp F      &trans               &kp LEFT  &mkp RCLK  &kp RIGHT  &trans     &kp J          &kp K       &kp L   &mouse_sweep  &trans
 &kp LEFT_ALT  &trans  &trans  &trans   &trans     &kp B      &trans              &kp DOWN              &trans     &trans         &trans      &trans  &trans  &trans
-                              &kp ESC  &kp SPACE  &mkp LCLK                                            &kp ENTER  &kp BACKSPACE  &kp DELETE
+                              &kp ESC  &spc_spam  &mkp LCLK                                            &kp ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
     };
