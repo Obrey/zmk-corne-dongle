@@ -113,17 +113,6 @@
         };
     };
 
-    macros {
-        koreng: koreng {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
-            label = "KORENG";
-            wait-ms = <40>;
-            tap-ms = <40>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -225,10 +214,10 @@
         game {
             display-name = "Game";
             bindings = <
-&kp TAB       &trans  &trans  &trans   &trans     &trans                    &trans          &trans     &trans         &trans      &trans  &trans  &trans
-&kp LCTRL     &kp A   &kp S   &kp D    &kp F      &trans            &trans  &trans  &trans  &trans     &kp J          &kp K       &kp L   &kp P   &trans
-&kp LEFT_ALT  &trans  &trans  &trans   &trans     &trans  &trans            &trans          &trans     &trans         &trans      &trans  &trans  &trans
-                              &kp ESC  &kp SPACE  &trans                                    &kp ENTER  &kp BACKSPACE  &kp DELETE
+&kp TAB       &kp Q   &trans  &trans   &trans     &trans                         &kp UP                &trans     &trans         &trans      &trans  &trans  &trans
+&kp LCTRL     &kp A   &kp S   &kp D    &kp F      &trans               &kp LEFT  &mkp RCLK  &kp RIGHT  &trans     &kp J          &kp K       &kp L   &kp P   &trans
+&kp LEFT_ALT  &trans  &trans  &trans   &trans     &kp B      &trans              &kp DOWN              &trans     &trans         &trans      &trans  &trans  &trans
+                              &kp ESC  &kp SPACE  &mkp LCLK                                            &kp ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
     };
