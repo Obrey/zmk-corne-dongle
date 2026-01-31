@@ -5,6 +5,7 @@
 
 #define MOUSE_FAST 7
 #define MOUSE_SLOW 8
+#define Game 9
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -25,7 +26,7 @@
     };
 
     mouse_teleport {
-        layers = <9>;
+        layers = <Game>;
         input-processors = <&zip_xy_scaler 20 1>;
     };
 
