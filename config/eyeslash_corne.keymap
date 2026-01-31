@@ -100,8 +100,8 @@
         mouse_sweep: mouse_sweep {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <800>;
+            wait-ms = <1>;
+            tap-ms = <400>;
             bindings = <&mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT>;
         };
     };
