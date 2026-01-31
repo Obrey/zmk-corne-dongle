@@ -91,7 +91,7 @@
             #binding-cells = <0>;
             wait-ms = <50>;
             tap-ms = <50>;
-            bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
+            bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
         };
 
         // 마우스 좌우 스윕 매크로
@@ -101,7 +101,16 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT>;
+            bindings = <&mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT>;
+        };
+
+        space_hold: space_hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>;
+            label = "SPACE_HOLD";
+            wait-ms = <1200>;
+            tap-ms = <1200>;
         };
     };
 
