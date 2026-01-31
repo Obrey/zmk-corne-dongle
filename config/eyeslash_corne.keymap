@@ -24,6 +24,11 @@
         input-processors = <&zip_xy_scaler 4 1>;
     };
 
+    mouse_teleport {
+        layers = <9>;
+        input-processors = <&zip_xy_scaler 20 1>;
+    };
+
     mouse_slow {
         layers = <MOUSE_SLOW>;
         input-processors = <&zip_xy_scaler 1 1>;
