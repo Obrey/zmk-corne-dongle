@@ -441,7 +441,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  game:
+  Game:
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -494,4 +494,4 @@ combos:
 - p: [37, 40]
   k: {t: Mouse, h: toggle}
 - p: [18, 40]
-  k: {t: game, h: toggle}
+  k: {t: Game, h: toggle}
