@@ -114,14 +114,32 @@
     };
 
     macros {
-        new_macro: new_macro {
+        // 스페이스를 10번 연타하는 매크로
+        spc_spam: spc_spam {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "NEW_MACRO";
+            wait-ms = <50>; // 누르는 간격
+            tap-ms = <50>;  // 떼는 간격
+            bindings
+                = <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>
+                , <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>, <&kp SPACE>;
         };
     };
 
+        mouse_sweep: mouse_sweep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>; // 마우스 이동은 간격이 짧아야 부드럽습니다
+            tap-ms = <5>;
+            bindings
+                // 왼쪽으로 크게 이동 (10번 반복)
+                = <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>
+                , <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>
+                // 오른쪽으로 크게 이동 (10번 반복)
+                , <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>
+                , <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
