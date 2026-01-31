@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <5>;
-            tap-ms = <1500>;
+            tap-ms = <800>;
             bindings = <&mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_RIGHT>;
         };
     };
