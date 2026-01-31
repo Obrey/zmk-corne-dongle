@@ -101,16 +101,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            bindings = <&mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT>;
-        };
-
-        space_hold: space_hold {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>;
-            label = "SPACE_HOLD";
-            wait-ms = <1200>;
-            tap-ms = <1200>;
+            bindings = <&mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT>;
         };
     };
 
