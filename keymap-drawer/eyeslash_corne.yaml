@@ -46,8 +46,8 @@ layers:
   - {t: '$$mdi:keyboard-esc$$', h: Media}
   - {t: '$$mdi:keyboard-space$$', h: Nav}
   - {t: '$$mdi:apple-keyboard-caps$$', h: Mouse}
-  - {t: '$$mdi:keyboard-return$$', h: Sym}
-  - {t: '$$mdi:backspace$$', h: Num}
+  - {t: '$$mdi:backspace$$', h: Sym}
+  - {t: '$$mdi:keyboard-return$$', h: Num}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fun}
   Num:
   - {t: '$$mdi:transfer$$', type: trans}
