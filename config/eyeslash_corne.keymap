@@ -183,8 +183,8 @@
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                            &mmv MOVE_UP                     &kp LG(LBKT)  &kp LG(RBKT)    &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
-&trans  &trans     &mo 8      &trans     &mo 7      &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LBKT)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &trans     &mo 8      &mo 8      &mo 7      &trans                            &mmv MOVE_UP                     &kp LG(LBKT)  &kp LG(RBKT)    &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
+&trans  &kp LG(A)  &mkp MCLK  &mkp RCLK  &mkp LCLK  &mo 7             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LBKT)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans                    &mmv MOVE_DOWN                   &kp LG(RBKT)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
                               &trans     &trans     &trans                                                             &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
