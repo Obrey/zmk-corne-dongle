@@ -111,7 +111,7 @@
 
         mouse {
             bindings = <&tog 5>;
-            key-positions = <43 33>;
+            key-positions = <33 44>;
         };
 
         game {
