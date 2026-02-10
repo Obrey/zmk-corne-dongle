@@ -491,7 +491,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
 combos:
-- p: [43, 33]
+- p: [33, 44]
   k: {t: Mouse, h: toggle}
 - p: [18, 40]
   k: {t: Game, h: toggle}
