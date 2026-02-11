@@ -123,6 +123,11 @@
             bindings = <&kp ENTER>;
             key-positions = <37 38>;
         };
+
+        back_space {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
     };
 
     keymap {
