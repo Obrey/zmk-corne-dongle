@@ -188,10 +188,10 @@
         Mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &kp LG(MINUS)   &kp LG(EQUAL)    &mo 8           &kp LG(RBKT)  &kp LG(LBKT)                            &mmv MOVE_UP                     &kp LG(LBKT)  &kp LG(RBKT)    &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
-&trans  &mo 8           &mkp MCLK        &mkp RCLK       &mkp LCLK     &mo 7                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LBKT)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP  &trans        &trans                    &mmv MOVE_DOWN                   &kp LG(RBKT)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                                         &trans          &trans        &trans                                                                   &mkp RCLK     &mkp LCLK       &mkp MCLK
+&trans  &kp LG(MINUS)    &kp LG(EQUAL)   &mo 8         &kp LG(RBKT)    &kp LG(LBKT)                            &mmv MOVE_UP                     &kp LG(LBKT)  &kp LG(RBKT)    &mmv MOVE_UP    &kp LG(EQUAL)    &kp LG(MINUS)    &trans
+&trans  &mo 8            &mkp MCLK       &mkp RCLK     &mkp LCLK       &mo 7                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LG(LBKT)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &trans        &trans                    &mmv MOVE_DOWN                   &kp LG(RBKT)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
+                                         &trans        &trans          &trans                                                                   &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
         };
 
