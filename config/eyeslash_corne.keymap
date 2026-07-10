@@ -143,11 +143,13 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <25 24>;
+            layers = <0 1>;
         };
 
         back_space {
             bindings = <&kp BACKSPACE>;
             key-positions = <23 24>;
+            layers = <0 1>;
         };
     };
 
