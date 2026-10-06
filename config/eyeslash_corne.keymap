@@ -150,11 +150,13 @@
         space {
             bindings = <&kp SPACE>;
             key-positions = <16 15>;
+            layers = <0>;
         };
 
         caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <17 16>;
+            layers = <0>;
         };
     };
 
