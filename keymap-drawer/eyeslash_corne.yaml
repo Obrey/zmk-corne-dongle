@@ -501,5 +501,7 @@ combos:
   l: [QWERTY, Num]
 - p: [16, 15]
   k: $$mdi:keyboard-space$$
+  l: [QWERTY]
 - p: [17, 16]
   k: $$mdi:apple-keyboard-caps$$
+  l: [QWERTY]
